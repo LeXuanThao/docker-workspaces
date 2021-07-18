@@ -1,0 +1,13 @@
+version: "3"
+services:
+    laravel:
+        # image: php-dev:1.0
+        build: .
+        container_name: laravel
+        hostname: laravel
+        environment:
+            PORT: 8000
+        volumes:
+            - ./code:/var/www/html/:rw
+        ports:
+            - 8000:8000
